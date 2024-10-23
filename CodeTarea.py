@@ -17,7 +17,7 @@ def main():
     if uploaded_file is not None:
         try:
             # Leer el archivo CSV
-            df = pd.read_csv(uploaded_file)
+            df = pd.read_csv('df2_cleaned_updated.csv')
 
             # Reemplazar los valores en la columna 'Default_Prestamo': 1 = 'PagoPrestamo', 0 = 'No_PagoPrestamo'
             df['Default_Prestamo'] = df['Default_Prestamo'].replace({1: 'PagoPrestamo', 0: 'No_PagoPrestamo'})
